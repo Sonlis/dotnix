@@ -2,6 +2,7 @@
 let
   exports = [
     "SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)"
+    "KUBE_EDITOR=nvim"
   ];
 in
 let

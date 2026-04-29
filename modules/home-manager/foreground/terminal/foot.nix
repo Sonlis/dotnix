@@ -25,6 +25,7 @@
       # Rosé Pine
 
       [colors-dark]
+      alpha=0.8
       background=191724
       foreground=e0def4
 
@@ -49,6 +50,7 @@
       flash=f6c177        # yellow (Gold)
 
       cursor=191724 e0def4
+      blur=true
     '';
   };
 }

@@ -35,6 +35,7 @@
       dms,
       nixpkgs,
       home-manager,
+      sops-nix,
       ...
     }:
     let

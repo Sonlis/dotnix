@@ -7,6 +7,7 @@
       "networkmanager"
       "greeter"
       "input" # needed for espanso
+      "wireshark"
     ];
     shell = pkgs.fish;
   };
@@ -15,4 +16,6 @@
     enable = true;
     wheelNeedsPassword = false;
   };
+
+  services.dbus.implementation = "dbus";
 }

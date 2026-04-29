@@ -28,6 +28,7 @@
           nil
           nixfmt
           rust-analyzer
+          terraform-ls
           typescript-language-server
           vscode-json-languageserver
           vue-language-server

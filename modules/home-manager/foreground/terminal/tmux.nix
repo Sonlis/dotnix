@@ -30,8 +30,8 @@
       bind-key -T copy-mode-vi 'C-k' select-pane -U
       bind-key -T copy-mode-vi 'C-l' select-pane -R
       bind-key -T copy-mode-vi 'C-\' select-pane -l
+      run ~/.config/tmux/plugins/rose-pine/rose-pine.tmux
     '';
     plugins = [ pkgs.tmuxPlugins.catppuccin ];
   };
-
 }

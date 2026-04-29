@@ -13,6 +13,7 @@
     vim
     wget
     wireguard-tools
+    wireshark
     woeusb
     woeusb-ng
   ];

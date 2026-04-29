@@ -38,6 +38,7 @@
       pavucontrol
       prek
       thunderbird
+      tree-sitter
       wl-clipboard
       yubikey-personalization
 

@@ -269,6 +269,15 @@ let
         hide-after-inactive-ms 10000
     }
   '';
+  blur = ''
+    blur {
+        passes 3
+        offset 2.0
+        noise 0.02
+        saturation 1.5
+    }
+
+  '';
 in
 {
   config = lib.mkIf (config.desktop == "niri") {
@@ -285,6 +294,7 @@ in
         ${binds}
         ${spawn-at-startup}
         ${cursor}
+        ${blur}
         include "dms/outputs.kdl"
         include "dms/colors.kdl"
         include "dms/layout.kdl"
