@@ -15,12 +15,11 @@
         currentThemeName = "dynamic";
         currentThemeCategory = "dynamic";
         customThemeFile = "";
-        registryThemeVariants = {
-        };
+        registryThemeVariants = { };
         matugenScheme = "scheme-vibrant";
         runUserMatugenTemplates = true;
         matugenTargetMonitor = "";
-        popupTransparency = 1;
+        popupTransparency = 0.8;
         dockTransparency = 1;
         widgetBackgroundColor = "sc";
         widgetColorMode = "default";
@@ -50,6 +49,12 @@
         modalAnimationSpeed = 1;
         modalCustomAnimationDuration = 150;
         enableRippleEffects = true;
+        blurEnabled = true;
+        blurForegroundLayers = true;
+        blurLayerOutlineOpacity = 0.14;
+        blurBorderColor = "outline";
+        blurBorderCustomColor = "#ffffff";
+        blurBorderOpacity = 0.35;
         wallpaperFillMode = "Fill";
         blurredWallpaperLayer = false;
         blurWallpaperOnOverview = false;
@@ -64,10 +69,11 @@
         showCpuTemp = true;
         showGpuTemp = true;
         selectedGpuIndex = 0;
-        enabledGpuPciIds = [
-
-        ];
+        enabledGpuPciIds = [ ];
         showSystemTray = true;
+        systemTrayIconTintMode = "none";
+        systemTrayIconTintSaturation = 50;
+        systemTrayIconTintStrength = 135;
         showClock = true;
         showNotificationButton = true;
         showBattery = true;
@@ -151,8 +157,7 @@
         workspaceFocusedBorderEnabled = false;
         workspaceFocusedBorderColor = "primary";
         workspaceFocusedBorderThickness = 2;
-        workspaceNameIcons = {
-        };
+        workspaceNameIcons = { };
         waveProgressEnabled = true;
         scrollTitleEnabled = true;
         audioVisualizerEnabled = true;
@@ -196,7 +201,7 @@
             type = "contains";
           }
           {
-            pattern = "^steam_app_(\\d+)$";
+            pattern = "^steam_app_(\d+)$";
             replacement = "steam_icon_$1";
             type = "regex";
           }
@@ -204,28 +209,30 @@
         centeringMode = "index";
         clockDateFormat = "";
         lockDateFormat = "";
+        greeterRememberLastSession = true;
+        greeterRememberLastUser = true;
+        greeterEnableFprint = false;
+        greeterEnableU2f = false;
+        greeterWallpaperPath = "";
         mediaSize = 1;
         appLauncherViewMode = "list";
         spotlightModalViewMode = "list";
         browserPickerViewMode = "grid";
-        browserUsageHistory = {
-        };
+        browserUsageHistory = { };
         appPickerViewMode = "grid";
-        filePickerUsageHistory = {
-        };
+        filePickerUsageHistory = { };
         sortAppsAlphabetically = false;
         appLauncherGridColumns = 4;
         spotlightCloseNiriOverview = true;
-        spotlightSectionViewModes = {
-        };
-        appDrawerSectionViewModes = {
-        };
+        spotlightSectionViewModes = { };
+        appDrawerSectionViewModes = { };
         niriOverviewOverlayEnabled = true;
         dankLauncherV2Size = "compact";
         dankLauncherV2BorderEnabled = false;
         dankLauncherV2BorderThickness = 2;
         dankLauncherV2BorderColor = "primary";
         dankLauncherV2ShowFooter = true;
+        dankLauncherV2UnloadOnClose = false;
         useAutoLocation = false;
         weatherEnabled = false;
         networkPreference = "auto";
@@ -286,20 +293,19 @@
         fadeToDpmsEnabled = true;
         fadeToDpmsGracePeriod = 5;
         launchPrefix = "";
-        brightnessDevicePins = {
-        };
-        wifiNetworkPins = {
-        };
-        bluetoothDevicePins = {
-        };
-        audioInputDevicePins = {
-        };
-        audioOutputDevicePins = {
-        };
+        brightnessDevicePins = { };
+        wifiNetworkPins = { };
+        bluetoothDevicePins = { };
+        audioInputDevicePins = { };
+        audioOutputDevicePins = { };
         gtkThemingEnabled = false;
         qtThemingEnabled = false;
         syncModeWithPortal = true;
         terminalsAlwaysDark = false;
+        muxType = "tmux";
+        muxUseCustomCommand = false;
+        muxCustomCommand = "";
+        muxSessionFilter = "";
         runDmsMatugenTemplates = true;
         matugenTemplateGtk = true;
         matugenTemplateNiri = true;
@@ -322,6 +328,7 @@
         matugenTemplateKcolorscheme = true;
         matugenTemplateVscode = true;
         matugenTemplateEmacs = true;
+        matugenTemplateZed = true;
         showDock = false;
         dockAutoHide = false;
         dockSmartAutoHide = false;
@@ -349,6 +356,8 @@
         dockMaxVisibleRunningApps = 0;
         dockShowOverflowBadge = true;
         notificationOverlayEnabled = false;
+        notificationPopupShadowEnabled = true;
+        notificationPopupPrivacyMode = false;
         modalDarkenBackground = false;
         lockScreenShowPowerActions = true;
         lockScreenShowSystemIcons = true;
@@ -361,6 +370,8 @@
         lockAtStartup = false;
         enableFprint = false;
         maxFprintTries = 15;
+        enableU2f = false;
+        u2fMode = "or";
         lockScreenActiveMonitor = "all";
         lockScreenInactiveColor = "#000000";
         lockScreenNotificationMode = 0;
@@ -370,12 +381,15 @@
         notificationTimeoutCritical = 0;
         notificationCompactMode = false;
         notificationPopupPosition = 0;
+        notificationAnimationSpeed = 1;
+        notificationCustomAnimationDuration = 400;
         notificationHistoryEnabled = true;
         notificationHistoryMaxCount = 50;
         notificationHistoryMaxAgeDays = 7;
         notificationHistorySaveLow = true;
         notificationHistorySaveNormal = true;
         notificationHistorySaveCritical = true;
+        notificationRules = [ ];
         osdAlwaysShowValue = false;
         osdPosition = 5;
         osdVolumeEnabled = true;
@@ -410,18 +424,12 @@
         updaterCustomCommand = "";
         updaterTerminalAdditionalParams = "";
         displayNameMode = "system";
-        screenPreferences = {
-        };
-        showOnLastDisplay = {
-        };
-        niriOutputSettings = {
-        };
-        hyprlandOutputSettings = {
-        };
-        displayProfiles = {
-        };
-        activeDisplayProfile = {
-        };
+        screenPreferences = { };
+        showOnLastDisplay = { };
+        niriOutputSettings = { };
+        hyprlandOutputSettings = { };
+        displayProfiles = { };
+        activeDisplayProfile = { };
         displayProfileAutoSelect = false;
         displayShowDisconnected = false;
         displaySnapToEdge = true;
@@ -549,29 +557,19 @@
         systemMonitorDisplayPreferences = [
           "all"
         ];
-        systemMonitorVariants = [
-
-        ];
-        desktopWidgetPositions = {
-        };
-        desktopWidgetGridSettings = {
-        };
-        desktopWidgetInstances = [
-
-        ];
-        desktopWidgetGroups = [
-
-        ];
+        systemMonitorVariants = [ ];
+        desktopWidgetPositions = { };
+        desktopWidgetGridSettings = { };
+        desktopWidgetInstances = [ ];
+        desktopWidgetGroups = [ ];
         builtInPluginSettings = {
           dms_settings_search = {
             trigger = "?";
           };
         };
-        launcherPluginVisibility = {
-        };
-        launcherPluginOrder = [
-
-        ];
+        clipboardEnterToPaste = false;
+        launcherPluginVisibility = { };
+        launcherPluginOrder = [ ];
         configVersion = 5;
       };
     };

@@ -14,6 +14,7 @@ in
       shellAliases = {
         os = "openstack";
         k = "kubectl";
+        gm = "git rev-parse --abbrev-ref origin/HEAD | string split -r -m1 / $str | tail -1 && git pull origin";
       };
       loginShellInit = "";
       shellInit = ''
