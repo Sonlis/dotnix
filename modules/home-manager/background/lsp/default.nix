@@ -23,6 +23,7 @@
           shellcheck
           bash-language-server
           gopls
+          helm-ls
           lua-language-server
           yaml-language-server
           nil

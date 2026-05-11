@@ -23,7 +23,11 @@
       kubie
 
       # Tools
+      aseprite # pixel art editing
+      libpcap # Lib to process pcap packets
       k9s
+      iftop
+      iotop
       fluxcd
       vault
       kubernetes-helm
@@ -45,11 +49,11 @@
       # Dev
       awscli2
       go
-      llvmPackages_21.libcxxClang
       lua
       luarocks
       terraform
       nodejs_24
+      llvmPackages_21.libcxxClang
       yarn
 
       # Dev python

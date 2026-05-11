@@ -5,12 +5,14 @@
     file
     foot
     git
+    iperf3
     lazygit
     lsof
     dnsutils
     netbird
     uwsm
     vim
+    tcpdump
     wget
     wireguard-tools
     wireshark

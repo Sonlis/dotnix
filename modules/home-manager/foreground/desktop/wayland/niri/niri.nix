@@ -276,7 +276,6 @@ let
         noise 0.02
         saturation 1.5
     }
-
   '';
 in
 {
