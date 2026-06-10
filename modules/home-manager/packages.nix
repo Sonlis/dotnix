@@ -23,7 +23,6 @@
       kubie
 
       # Tools
-      aseprite # pixel art editing
       libpcap # Lib to process pcap packets
       k9s
       iftop
@@ -45,6 +44,9 @@
       tree-sitter
       wl-clipboard
       yubikey-personalization
+      nono # Sandboxing for coding agents
+      pi-coding-agent
+      ipmitool
 
       # Dev
       awscli2
@@ -54,6 +56,7 @@
       terraform
       nodejs_24
       llvmPackages_21.libcxxClang
+      libclang
       yarn
 
       # Dev python

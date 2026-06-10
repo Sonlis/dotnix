@@ -5,10 +5,16 @@
     keyMode = "vi";
     shortcut = "a";
     extraConfig = ''
+      set -g mouse on
       bind-key -T copy-mode-vi v send-keys -X begin-selection
-      set-option -sg escape-time 10 # For nvim navigator
+      # For nvim navigator
+      set-option -sg escape-time 10
       set-option -g focus-events on
       set-option -g default-terminal "screen-256color"
+      # For better integration with pi
+      set -g extended-keys 
+      # this format is not the one recommanded anymore, instead should use kitty key integration protocol. But I didn't find references of tmux supporting it.
+      set -g extended-keys-format csi-u 
       bind -T copy-mode-vi y send -X copy-selection
       # Smart pane switching with awareness of Vim splits.
       # See: https://github.com/christoomey/vim-tmux-navigator

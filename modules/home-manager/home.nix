@@ -10,7 +10,7 @@ in
 
     ./packages.nix
     ./theme.nix
-    #./secrets.nix
+    ./secrets.nix
   ];
 
   # Let Home Manager install and manage itself.

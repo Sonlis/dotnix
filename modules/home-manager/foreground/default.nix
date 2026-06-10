@@ -4,5 +4,6 @@
     ./desktop
     ./terminal
     ./browser
+    ./programs
   ];
 }
