@@ -3,6 +3,7 @@
   self,
   lib,
   system,
+  sops-nix,
 }:
 let
   machines = {

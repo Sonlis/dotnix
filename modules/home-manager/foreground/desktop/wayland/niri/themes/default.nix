@@ -1,0 +1,4 @@
+{ ... }:
+{
+  imports = [ ./rose-pine.nix ];
+}

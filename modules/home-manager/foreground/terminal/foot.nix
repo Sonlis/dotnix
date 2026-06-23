@@ -6,7 +6,7 @@
     settings = {
       main = {
         term = "screen-256color";
-        font = "JetBrains Mono NF:size=12";
+        font = "JetBrains Mono NF:size=12:fontfeatures=ss02 calt zero";
         shell = "${config.shell.main}";
         include = "/home/${config.user}/.config/foot/${config.theme}";
       };

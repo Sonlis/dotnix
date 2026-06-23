@@ -4,14 +4,27 @@
   ...
 }:
 let
+  layout = ''
+    layout {
+        gaps 6
+    }
+  '';
   binds = ''
     binds {
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
-        Mod+Space hotkey-overlay-title="Toggle Application Launcher" { spawn "dms" "ipc" "spotlight" "toggle" ;}
-        Mod+Alt+L hotkey-overlay-title="Toggle Lock Screen" { spawn "dms" "ipc" "lock" "lock"; }
-        Mod+P hotkey-overlay-title="Toggle Clipboard Manager" { spawn "dms" "ipc" "clipboard" "toggle"; }
+        Mod+Space hotkey-overlay-title="Toggle Application Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+        Mod+Alt+L hotkey-overlay-title="Toggle Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
+        Mod+P hotkey-overlay-title="Toggle Clipboard Manager" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+        Mod+B hotkey-overlay-title="Toggle Clipboard Manager" { spawn "noctalia" "msg" "panel-toggle" "control-center" "bluetooth"; }
+
+        // Audio & Brightness
+        XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+        XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+        XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+        XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+        XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
 
         // Consume one window from the right to the bottom of the focused column.
         Mod+Period  { consume-window-into-column; }
@@ -22,7 +35,6 @@ let
         // Open/close the Overview: a zoomed-out view of workspaces and windows.
         // You can also move the mouse into the top-left hot corner,
         // or do a four-finger swipe up on a touchpad.
-        Mod+O repeat=false { toggle-overview; }
 
         Mod+Q repeat=false { close-window; }
 
@@ -94,6 +106,7 @@ let
         // Alternatively, there are commands to move just a single window:
         // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
         // ...
+
 
         Mod+Shift+Page_Down { move-workspace-down; }
         Mod+Shift+Page_Up   { move-workspace-up; }
@@ -212,14 +225,6 @@ let
         // rather than stacked on top of each other.
         Mod+W { toggle-column-tabbed-display; }
 
-        // Actions to switch layouts.
-        // Note: if you uncomment these, make sure you do NOT have
-        // a matching layout switch hotkey configured in xkb options above.
-        // Having both at once on the same hotkey will break the switching,
-        // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-        // Mod+Space       { switch-layout "next"; }
-        // Mod+Shift+Space { switch-layout "prev"; }
-
         Mod+S { screenshot; }
         Ctrl+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
@@ -241,6 +246,7 @@ let
         // Powers off the monitors. To turn them back on, do any input like
         // moving the mouse or pressing any other key.
         Mod+Shift+P { power-off-monitors; }
+
     }
   '';
 
@@ -259,7 +265,7 @@ let
     } 
   '';
   spawn-at-startup = ''
-    spawn-at-startup "dms" "run"
+    spawn-at-startup "noctalia"
   '';
   cursor = ''
         cursor {
@@ -276,6 +282,25 @@ let
         noise 0.02
         saturation 1.5
     }
+    window-rule {
+      background-effect {
+        blur true
+        xray false
+      }
+    }
+
+    /*
+      Noctalia
+      Disable xray on all our surfaces so it looks more realistic.
+      Noctalia publishes blur regions automatically when ext-background-effects is available.
+    */
+    layer-rule {
+      match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+      background-effect {
+        xray false
+        // blur false
+      }
+    }
   '';
 in
 {
@@ -284,20 +309,40 @@ in
       enable = true;
       target = "niri/config.kdl";
       text = ''
-        screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
-        prefer-no-csd
-        hotkey-overlay {
-            skip-at-startup
-        }
-        ${input}
-        ${binds}
-        ${spawn-at-startup}
-        ${cursor}
-        ${blur}
-        include "dms/outputs.kdl"
-        include "dms/colors.kdl"
-        include "dms/layout.kdl"
-        include "dms/binds.kdl"
+            screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
+            prefer-no-csd
+            hotkey-overlay {
+                skip-at-startup
+            }
+            ${layout}
+            ${input}
+            ${binds}
+            ${spawn-at-startup}
+            ${cursor}
+            ${blur}
+        window-rule {
+              // Rounded corners for a modern look.
+              geometry-corner-radius 10
+
+              // Clips window contents to the rounded corner boundaries.
+              clip-to-geometry true
+            }
+
+            // Floating Noctalia settings window.
+            window-rule {
+              match app-id="dev.noctalia.Noctalia.Settings"
+              open-floating true
+              default-column-width { fixed 1080; }
+              default-window-height { fixed 920; }
+            }
+
+            debug {
+              // Allows notification actions and window activation from Noctalia.
+              honor-xdg-activation-with-invalid-serial
+            }
+            include "themes/rose-pine.kdl"
+            include "outputs.kdl"
+            include "miscs.kdl"
       '';
     };
   };

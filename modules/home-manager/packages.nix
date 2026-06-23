@@ -38,7 +38,6 @@
       xh # Friendly curl
       networkmanagerapplet
       openstackclient
-      pavucontrol
       prek
       thunderbird
       tree-sitter
@@ -47,6 +46,7 @@
       nono # Sandboxing for coding agents
       pi-coding-agent
       ipmitool
+      crane # Tool to interact with container images
 
       # Dev
       awscli2
@@ -58,6 +58,7 @@
       llvmPackages_21.libcxxClang
       libclang
       yarn
+      podman-compose
 
       # Dev python
       ruff
@@ -66,7 +67,6 @@
 
       signal-desktop
       discord
-      nautilus
       qimgv # Image viewer
       ytmdesktop
     ];

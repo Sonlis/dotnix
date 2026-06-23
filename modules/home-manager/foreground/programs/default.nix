@@ -2,5 +2,8 @@
   ...
 }:
 {
-  imports = [ ./k9s.nix ];
+  imports = [
+    ./k9s.nix
+    ./yazi.nix
+  ];
 }

@@ -24,6 +24,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+    };
+
     catppuccin.url = "github:catppuccin/nix";
 
   };
@@ -60,6 +64,7 @@
           lib
           self
           system
+          sops-nix
           ;
       };
       homeConfigurations = import ./homes {
