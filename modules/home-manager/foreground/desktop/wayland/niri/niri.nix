@@ -17,7 +17,9 @@ let
         Mod+Space hotkey-overlay-title="Toggle Application Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
         Mod+Alt+L hotkey-overlay-title="Toggle Lock Screen" { spawn "noctalia" "msg" "session" "lock"; }
         Mod+P hotkey-overlay-title="Toggle Clipboard Manager" { spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
-        Mod+B hotkey-overlay-title="Toggle Clipboard Manager" { spawn "noctalia" "msg" "panel-toggle" "control-center" "bluetooth"; }
+        Mod+B hotkey-overlay-title="Toggle Bluetooth Control" { spawn "noctalia" "msg" "panel-toggle" "control-center" "bluetooth"; }
+        Mod+M hotkey-overlay-title="Toggle Media Control" { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
+        Mod+A hotkey-overlay-title="Toggle Audio Control" { spawn "noctalia" "msg" "panel-toggle" "control-center" "audio"; }
 
         // Audio & Brightness
         XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }

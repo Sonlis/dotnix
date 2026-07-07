@@ -23,6 +23,7 @@
           shellcheck
           bash-language-server
           gopls
+          jinja-lsp
           helm-ls
           lua-language-server
           yaml-language-server

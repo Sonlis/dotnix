@@ -36,9 +36,10 @@
       gonzo # Log analysis
       openssl
       xh # Friendly curl
+      zoxide # cd alternative
       networkmanagerapplet
       openstackclient
-      prek
+      prek # pre-commit alternative
       thunderbird
       tree-sitter
       wl-clipboard
@@ -47,6 +48,7 @@
       pi-coding-agent
       ipmitool
       crane # Tool to interact with container images
+      obsidian
 
       # Dev
       awscli2
