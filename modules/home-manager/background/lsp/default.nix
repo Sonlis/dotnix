@@ -27,6 +27,7 @@
           helm-ls
           lua-language-server
           yaml-language-server
+          marksman
           nil
           nixfmt
           rust-analyzer
