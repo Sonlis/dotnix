@@ -37,6 +37,7 @@
         name = "JetBrains Mono";
         size = 11;
       };
+      gtk4.theme = config.gtk.theme;
     };
   };
 }

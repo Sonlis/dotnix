@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  options.ssh.matchBlocks = lib.mkOption {
+  options.ssh.settings = lib.mkOption {
     type = lib.types.attrs;
     default = {
       all = {
@@ -13,7 +13,7 @@
     programs.ssh = {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = config.ssh.matchBlocks;
+      settings = config.ssh.settings;
     };
   };
 }

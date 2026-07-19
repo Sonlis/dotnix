@@ -2,7 +2,7 @@
 {
   services.kanshi = {
     enable = true;
-    profiles = {
+    settings = {
       no_laptop_screen_when_connected = {
         name = "no_laptop_screen_when_connected";
         outputs = [
