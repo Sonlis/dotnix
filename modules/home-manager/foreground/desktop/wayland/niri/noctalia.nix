@@ -16,6 +16,8 @@
 
       wallpaper = {
         enabled = true;
+        directory_dark = "/home/${config.user}/Pictures/dark-wallpapers";
+        directory_light = "/home/${config.user}/Pictures/light-wallpapers";
         default.path = "/home/${config.user}/Pictures/dark-wallpapers/jellyfish-rose-pine.jpg";
       };
       shell = {
@@ -41,6 +43,7 @@
           capsule = true;
           capsule_thickness = 1.0;
           margin_ends = 5;
+          margin_edge = 5;
         };
       };
       widget = {
