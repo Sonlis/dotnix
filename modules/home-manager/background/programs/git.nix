@@ -2,13 +2,32 @@
 {
 
   options.git = {
-    userName = lib.mkOption {
-      type = lib.types.str;
-      default = "Sonlis";
-    };
-    email = lib.mkOption {
-      type = lib.types.str;
-      default = "bastien.jeannelle@gmail.com";
+    users = lib.mkOption {
+      type = lib.types.attrsOf (
+        lib.types.submodule (
+          { ... }: {
+            options = {
+              directories = lib.mkOption {
+                type = lib.types.listOf lib.types.str;
+                default = [ ];
+                example = [
+                  "~/work"
+                  "~/clients/acme"
+                ];
+              };
+
+              name = lib.mkOption {
+                type = lib.types.str;
+              };
+
+              email = lib.mkOption {
+                type = lib.types.str;
+              };
+            };
+          }
+        )
+      );
+      default = { };
     };
     signingKey = lib.mkOption {
       type = lib.types.str;
@@ -23,11 +42,18 @@
         key = config.git.signingKey;
         signByDefault = true;
       };
+      includes = lib.flatten (
+        lib.mapAttrsToList (
+          _: user:
+          map (directory: {
+            condition = "gitdir:${directory}/";
+            contents.user = {
+              inherit (user) name email;
+            };
+          }) user.directories
+        ) config.git.users
+      );
       settings = {
-        user = {
-          name = "${config.git.userName}";
-          email = "${config.git.email}";
-        };
         safe.directory = [ "/etc/nixos" ];
         pull.rebase = true;
         gpg = {
