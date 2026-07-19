@@ -28,14 +28,11 @@
       url = "github:noctalia-dev/noctalia";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
-
   };
 
   outputs =
     inputs@{
       self,
-      catppuccin,
       dms,
       nixpkgs,
       home-manager,
