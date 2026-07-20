@@ -5,7 +5,7 @@
     settings = [
       {
         profile = {
-          name = "Laptop with screen connected";
+          name = "Laptop_with_screen_connected";
           outputs = [
             {
               criteria = "DP-3";
@@ -21,7 +21,7 @@
       }
       {
         profile = {
-          name = "Just laptop";
+          name = "Just_laptop";
           outputs = [
             {
               criteria = "eDP-1";
