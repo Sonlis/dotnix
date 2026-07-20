@@ -49,6 +49,7 @@
       ipmitool
       crane # Tool to interact with container images
       obsidian
+      sops # Secrets OPerationS
 
       # Dev
       awscli2
