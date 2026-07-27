@@ -28,6 +28,11 @@
       };
       bar = {
         main = {
+          monitor = {
+            DP-1 = {
+              margin_ends = 800;
+            };
+          };
           start = [ "workspaces" ];
           center = [
             "clock"
@@ -42,7 +47,6 @@
           background_opacity = 0.0;
           capsule = true;
           capsule_thickness = 1.0;
-          margin_ends = 5;
           margin_edge = 5;
         };
       };
