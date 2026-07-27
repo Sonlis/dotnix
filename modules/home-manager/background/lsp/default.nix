@@ -36,6 +36,7 @@
           vscode-json-languageserver
           vue-language-server
           vtsls
+          zuban
         ]
       else
         [ ]

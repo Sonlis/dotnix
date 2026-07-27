@@ -43,11 +43,11 @@
         "nixpkgs-lib": "nixpkgs-lib"
       },
       "locked": {
-        "lastModified": 1782949081,
-        "narHash": "sha256-vp6Y/Grm98ESt6ceOkWiHWyZRDV3J1RID4w+6NWK9yA=",
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "17c9d6cdfc60c64f4ee8d306f9bc0b4ccb51481e",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
         "type": "github"
       },
       "original": {
@@ -278,14 +278,17 @@
         "tool3box": "tool3box"
       },
       "locked": {
-        "lastModified": 1784545881,
-        "narHash": "sha256-wJKwefCb/x3kIyXyJVErGKf4bYX37xWOKKUFs117hao=",
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
+        "lastModified": 1784475855,
+        "narHash": "sha256-vwdTqK2XAkbB4x2basjiCrfLJpmzTMIZhPEfxyxqnEU=",
+        "ref": "refs/heads/main",
+        "rev": "ac6eb7aeafb18e309d54f08341bd71f5abf2a301",
+        "revCount": 84,
+        "type": "git",
+        "url": "ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak"
       },
       "original": {
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
+        "type": "git",
+        "url": "ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak"
       }
     },
     "kipmi": {
@@ -299,11 +302,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784545261,
-        "narHash": "sha256-reQeGfUiO4cNsDo4j2rEWgt4YJKe2Jy9nI6qYBD7Hlo=",
-        "ref": "refs/heads/develop",
-        "rev": "ac82db9fabfc8e65aba7e969a1b9c07ae9e5ae26",
-        "revCount": 26,
+        "lastModified": 1780246686,
+        "narHash": "sha256-ZThXj6MyoHFBsoFALQhjdEIerY/0hKcUsYYgPjnIam4=",
+        "ref": "refs/heads/master",
+        "rev": "109df8db9c49315e46b01a141cdb8bd937593b78",
+        "revCount": 10,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/L3/swissknife/kipmi"
       },
@@ -322,11 +325,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781104235,
-        "narHash": "sha256-eBNIjNmZ14UyiWE8RAkNszBAq0JXjnTg0RONgP36RSA=",
+        "lastModified": 1780939313,
+        "narHash": "sha256-Fty91vj3woNxG/o+VEuPuFh3DZcWiy+BbRLd1u25O6Y=",
         "ref": "refs/heads/master",
-        "rev": "ee60d802881251dd94280f0f40f1383b0dc6807d",
-        "revCount": 68,
+        "rev": "f8e095220a77e0985b4999966730a43c4990932b",
+        "revCount": 65,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/L3/swissknife/kssh"
       },
@@ -353,11 +356,11 @@
     },
     "nixpkgs-lib": {
       "locked": {
-        "lastModified": 1782614948,
-        "narHash": "sha256-ePjCwr1sNm9NYUqywL7QfK3JnlS015msC+eBu2zKlp8=",
+        "lastModified": 1777168982,
+        "narHash": "sha256-GOkGPcboWE9BmGCRMLX3worL4EMnsnG8MyKmXNeYuhQ=",
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
-        "rev": "db3f255737b94216eb71cce308e2912cf6bc2d7c",
+        "rev": "f5901329dade4a6ea039af1433fb087bd9c1fe14",
         "type": "github"
       },
       "original": {
@@ -530,11 +533,11 @@
         "nsh": "nsh"
       },
       "locked": {
-        "lastModified": 1784545564,
-        "narHash": "sha256-8Yc6Vz9V66rrrRAM2qdZ9h/iHszxVlSo7e4NhqzpLYQ=",
+        "lastModified": 1783860739,
+        "narHash": "sha256-bmsz/U6iBXaMYcjjnDEhwpGAjXBCMAzd+Fu1UpK+Bp8=",
         "ref": "master",
-        "rev": "e964ad4eaf12fe7d52d53d05d913a2589ab561de",
-        "revCount": 114,
+        "rev": "6532f2225c142947a01cb0cc3b6c26064401adba",
+        "revCount": 82,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/l3/swissknife/cli"
       },
