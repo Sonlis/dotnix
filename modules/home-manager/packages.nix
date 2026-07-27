@@ -30,6 +30,7 @@
       fluxcd
       vault
       kubernetes-helm
+      kustomize
       fd # find alternative, mostly used by neovim-telescope
       flamegraph
       glab # gitlab cli
@@ -50,6 +51,7 @@
       crane # Tool to interact with container images
       obsidian
       sops # Secrets OPerationS
+      yq
 
       # Dev
       awscli2
