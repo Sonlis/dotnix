@@ -18,7 +18,7 @@
         enabled = true;
         directory_dark = "/home/${config.user}/Pictures/dark-wallpapers";
         directory_light = "/home/${config.user}/Pictures/light-wallpapers";
-        default.path = "/home/${config.user}/Pictures/dark-wallpapers/jellyfish-rose-pine.jpg";
+        default.path = "/home/${config.user}/Pictures/dark-wallpapers/lake.png";
       };
       shell = {
         font_family = "JetBrainsMono NF";
