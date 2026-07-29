@@ -74,6 +74,9 @@
       discord
       qimgv # Image viewer
       ytmdesktop
+
+      # Mandatories
+      pokeget-rs
     ];
 
     # Programs natively supported by home-manager.

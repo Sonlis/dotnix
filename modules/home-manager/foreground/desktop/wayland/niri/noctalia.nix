@@ -51,7 +51,10 @@
         };
       };
       widget = {
-        display = "none";
+        spacing = 20;
+        session = {
+          color = "error";
+        };
       };
       idle = {
         behavior = {
