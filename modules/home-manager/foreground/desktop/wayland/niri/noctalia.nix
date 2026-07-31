@@ -26,9 +26,15 @@ in
     enable = true;
 
     settings = {
+
       location = {
         auto_locate = true;
       };
+
+      nightlight = {
+        enabled = true;
+      };
+
       theme = lib.recursiveUpdate {
         mode = "auto";
       } theme_mapping;
@@ -42,12 +48,14 @@ in
           enabld = true;
         };
       };
+
       shell = {
         font_family = "JetBrainsMono NF";
         panel = {
           transparency_mode = "glass";
         };
       };
+
       bar = {
         main = {
           monitor = {
@@ -72,12 +80,14 @@ in
           margin_edge = 5;
         };
       };
+
       widget = {
         spacing = 20;
         session = {
           color = "error";
         };
       };
+
       idle = {
         behavior = {
           lock = {
