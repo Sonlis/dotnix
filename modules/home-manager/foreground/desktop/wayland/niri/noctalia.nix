@@ -1,4 +1,22 @@
-{ config, inputs, ... }:
+{
+  config,
+  inputs,
+  lib,
+  ...
+}:
+let
+  theme_override = {
+    "everforest" = {
+      source = "community";
+      community_palette = "Everforest";
+    };
+    "rose-pine" = {
+      source = "builtin";
+      builtin = "Rosé Pine";
+    };
+  };
+  theme_mapping = theme_override.${config.theme} or { };
+in
 {
   imports = [
     inputs.noctalia.homeModules.default
@@ -8,17 +26,21 @@
     enable = true;
 
     settings = {
-      theme = {
-        mode = "dark";
-        source = "builtin";
-        builtin = "Rosé Pine";
+      location = {
+        auto_locate = true;
       };
+      theme = lib.recursiveUpdate {
+        mode = "auto";
+      } theme_mapping;
 
       wallpaper = {
         enabled = true;
         directory_dark = "/home/${config.user}/Pictures/dark-wallpapers";
         directory_light = "/home/${config.user}/Pictures/light-wallpapers";
         default.path = "/home/${config.user}/Pictures/dark-wallpapers/lake.png";
+        automation = {
+          enabld = true;
+        };
       };
       shell = {
         font_family = "JetBrainsMono NF";
