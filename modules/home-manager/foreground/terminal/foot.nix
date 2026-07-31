@@ -25,7 +25,7 @@
       # Rosé Pine
 
       [colors-dark]
-      alpha=0.8
+      alpha=0.9
       background=191724
       foreground=e0def4
 
