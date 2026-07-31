@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./rose-pine.nix ];
+  imports = [
+    ./rose-pine.nix
+    ./everforest.nix
+  ];
 }

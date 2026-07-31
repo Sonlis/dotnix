@@ -342,7 +342,7 @@ in
               // Allows notification actions and window activation from Noctalia.
               honor-xdg-activation-with-invalid-serial
             }
-            include "themes/rose-pine.kdl"
+            include "themes/${config.theme}.kdl"
             include "outputs.kdl"
             include "miscs.kdl"
       '';

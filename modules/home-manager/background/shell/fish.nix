@@ -26,6 +26,65 @@ in
       '';
     };
 
+    xdg.configFile."fish-everforest" = {
+      enable = true;
+      target = "fish/themes/everforest.theme";
+      text = ''
+        # syntax highlighting variables
+        # https://fishshell.com/docs/current/interactive.html#syntax-highlighting-variables
+        fish_color_normal d3c6ab
+        fish_color_command d699b6
+        fish_color_keyword 83c092
+        fish_color_quote dbbc7f
+        fish_color_redirection 7a8e8e
+        fish_color_end 5a6b6b
+        fish_color_error e67e80
+        fish_color_param e69875
+        fish_color_comment 9da9a9
+        # fish_color_match --background=brblue
+        fish_color_selection --reverse
+        # fish_color_history_current --bold
+        fish_color_operator d3c6ab
+        fish_color_escape 5a6b6b
+        fish_color_autosuggestion 9da9a9
+        fish_color_cwd e69875
+        # fish_color_cwd_root red
+        fish_color_user dbbc7f
+        fish_color_host 83c092
+        fish_color_host_remote d699b6
+        fish_color_cancel d3c6ab
+        fish_color_search_match --background=dbbc7f
+        fish_color_valid_path
+
+        # pager color variables
+        # https://fishshell.com/docs/current/interactive.html#pager-color-variables
+        fish_pager_color_progress e69875
+        fish_pager_color_background --background=2b3a39
+        fish_pager_color_prefix 83c092
+        fish_pager_color_completion 9da9a9
+        fish_pager_color_description 9da9a9
+        fish_pager_color_secondary_background
+        fish_pager_color_secondary_prefix
+        fish_pager_color_secondary_completion
+        fish_pager_color_secondary_description
+        fish_pager_color_selected_background --background=34454a
+        fish_pager_color_selected_prefix 83c092
+        fish_pager_color_selected_completion d3c6ab
+        fish_pager_color_selected_description d3c6ab
+
+        # custom color variables
+        fish_color_subtle 9da9a9
+        fish_color_text d3c6ab
+        fish_color_love e67e80
+        fish_color_gold dbbc7f
+        fish_color_rose e69875
+        fish_color_pine 5a6b6b
+        fish_color_foam 83c092
+        fish_color_iris d699b6
+        fish_color_base 2b3a39
+      '';
+    };
+
     xdg.configFile."fish-rose-pine" = {
       enable = true;
       target = "fish/themes/rose-pine.theme";
