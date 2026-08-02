@@ -1,4 +1,5 @@
 {
+  pkgs,
   config,
   inputs,
   lib,
@@ -22,6 +23,23 @@ in
     inputs.noctalia.homeModules.default
   ];
 
+  home.file.".local/bin/theme-toggle" = {
+    text = ''
+      #!/usr/bin/env fish
+
+      set scheme (dconf read /org/gnome/desktop/interface/color-scheme | string replace -a "'" "")
+
+      if test "$scheme" = "prefer-light"
+          dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+      else if test "$scheme" = "prefer-dark"
+          dconf write /org/gnome/desktop/interface/color-scheme "'prefer-light'"
+      else
+          echo "Unknown: $scheme"
+      end
+    '';
+    executable = true;
+  };
+
   programs.noctalia = {
     enable = true;
 
@@ -43,9 +61,8 @@ in
         enabled = true;
         directory_dark = "/home/${config.user}/Pictures/dark-wallpapers";
         directory_light = "/home/${config.user}/Pictures/light-wallpapers";
-        default.path = "/home/${config.user}/Pictures/dark-wallpapers/lake.png";
         automation = {
-          enabld = true;
+          enabled = true;
         };
       };
 
@@ -86,6 +103,13 @@ in
         session = {
           color = "error";
         };
+        workspaces = {
+          show_labels = false;
+        };
+      };
+
+      hooks = {
+        theme_mode_changed = "~/.local/bin/theme-toggle";
       };
 
       idle = {
