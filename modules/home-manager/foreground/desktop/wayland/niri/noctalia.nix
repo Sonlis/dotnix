@@ -54,7 +54,7 @@ in
       };
 
       theme = lib.recursiveUpdate {
-        mode = "auto";
+        mode = "dark";
       } theme_mapping;
 
       wallpaper = {
