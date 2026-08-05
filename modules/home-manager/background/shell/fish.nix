@@ -23,6 +23,7 @@ in
       interactiveShellInit = ''
         fish_config theme choose "${config.theme}"
         zoxide init fish | source
+        pokeget --hide-name random
       '';
     };
 
