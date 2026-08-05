@@ -51,7 +51,7 @@
       crane # Tool to interact with container images
       obsidian
       sops # Secrets OPerationS
-      yq
+      yq-go
 
       # Dev
       awscli2
