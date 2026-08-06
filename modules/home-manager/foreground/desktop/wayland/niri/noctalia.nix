@@ -92,7 +92,7 @@ in
             "session"
           ];
           background_opacity = 0.0;
-          capsule = true;
+          capsule = false;
           capsule_thickness = 1.0;
           margin_edge = 5;
         };

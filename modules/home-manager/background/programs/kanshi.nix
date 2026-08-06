@@ -37,6 +37,22 @@
       }
       {
         profile = {
+          name = "Laptop_with_screen_connected_3";
+          outputs = [
+            {
+              criteria = "HDMI-A-2";
+              status = "enable";
+              position = "0,0";
+            }
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+          ];
+        };
+      }
+      {
+        profile = {
           name = "Just_laptop";
           outputs = [
             {
