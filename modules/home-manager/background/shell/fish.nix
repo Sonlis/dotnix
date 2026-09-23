@@ -24,7 +24,9 @@ in
         fish_config theme choose "${config.theme}"
         zoxide init fish | source
         pokeget --hide-name sinnoh
+        source ~/.config/fish/env_variables
         set fish_greeting
+        set -gx EDITOR nvim
       '';
     };
 

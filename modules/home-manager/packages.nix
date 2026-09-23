@@ -53,6 +53,10 @@
       sops # Secrets OPerationS
       yq-go
 
+      # dns
+      doggo
+      # dnsping
+
       # Dev
       awscli2
       go
