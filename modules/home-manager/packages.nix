@@ -73,6 +73,8 @@
       ruff
       ty
       uv
+      tilt
+      kind
 
       signal-desktop
       discord
