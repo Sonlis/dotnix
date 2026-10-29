@@ -108,6 +108,7 @@ in
     enableBashIntegration = lib.mkDefault config.programs.bash.enable;
     enableZshIntegration = lib.mkDefault config.programs.zsh.enable;
     enableFishIntegration = lib.mkDefault config.programs.fish.enable;
+    enableTransience = true;
     settings = {
       format = "$hostname$directory$git_branch$git_state$git_status$kubernetes$character";
       command_timeout = 1000;
