@@ -23,7 +23,7 @@ in
   xdg.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
     XDG_CONFIG_HOME = "/home/${user}/.config";
   };
   home.stateVersion = "25.05";
