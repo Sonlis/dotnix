@@ -87,7 +87,6 @@
     target = "foot/everforest";
     text = ''
       [colors-dark] 
-      alpha=0.90
       background=2b3339
       foreground=d3c6aa
       blur=true
@@ -112,7 +111,6 @@
       bright7=d3c6aa # white
 
       [colors-light] 
-      alpha=0.90
       background=fff9e8
       foreground=5c6a72
       blur=true
