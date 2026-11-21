@@ -2,25 +2,25 @@
   description = "Bastibast flake with Home Manager";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:/NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:/nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     sops-nix = {
-      url = "github:Mic92/sops-nix";
+      url = "github:/Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     infomanixak = {
-      url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
+      url = "git+ssh://git@gitlab.infomaniak.ch:/platforms-services/nix/infoma-nix-ak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia";
+      url = "github:/noctalia-dev/noctalia";
     };
 
   };
