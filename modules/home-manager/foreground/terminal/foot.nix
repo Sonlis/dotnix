@@ -147,6 +147,7 @@
       # https://github.com/arcticicestudio/nord-alacritty/blob/develop/src/nord.yml
 
       [colors-dark]
+      alpha=0.9
       cursor = 2e3440 d8dee9
       foreground = d8dee9
       background = 2e3440
