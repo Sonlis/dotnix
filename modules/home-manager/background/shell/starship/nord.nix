@@ -9,7 +9,7 @@
           vimcmd_symbol = "[❮](nord15)";
         };
         directory = {
-          style = "nord8";
+          style = "nord7";
         };
         git_branch = {
           format = "(fg:nord7)[ $symbol $branch ]($style)(fg:nord10) ";
