@@ -5,7 +5,7 @@
           focus-ring {
               on
               width 2
-              active-color "#d08770"
+              active-color "#d8dee9"
               inactive-color "#4c566a"
               urgent-color "#bf616a"
           }
