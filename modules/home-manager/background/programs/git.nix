@@ -54,6 +54,7 @@
         ) config.git.users
       );
       settings = {
+        push.autoSetupRemote = true;
         safe.directory = [ "/etc/nixos" ];
         pull.rebase = true;
         gpg = {
